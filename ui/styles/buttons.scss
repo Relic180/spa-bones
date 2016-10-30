@@ -5,9 +5,9 @@ $btnTransition: 150ms;
     display: inline-flex;
     height: 36px;
     padding: 0 20px;
-    border: 1px solid $blue;
+    border: 1px solid $button;
     border-radius: 3px;
-    background-color: $blue;
+    background-color: $button;
     color: $white;
     font-size: 14px;
     line-height: 36px;
@@ -23,14 +23,14 @@ $btnTransition: 150ms;
 
     &:focus {
         border-style: dashed;
-        border-color: lighten($blue, 10%);
-        background-color: darken($blue, 10%);
+        border-color: lighten($button, 10%);
+        background-color: darken($button, 10%);
     }
 
     &.hover,
     &:hover {
-        border-color: $blueDark;
-        background-color: $blueDark;
+        border-color: $buttonDark;
+        background-color: $buttonDark;
     }
 
     &[disabled] {
@@ -39,20 +39,20 @@ $btnTransition: 150ms;
     }
 
     &.btn-light {
-        border-color: darken($blueLight, 7%);
-        background-color: darken($blueLight, 7%);
+        border-color: darken($buttonLight, 7%);
+        background-color: darken($buttonLight, 7%);
 
         &:not([disabled]) {
 
             &:focus {
-                border-color: lighten($blueLight, 7%);
-                background-color: darken($blueLight, 7%);
+                border-color: lighten($buttonLight, 7%);
+                background-color: darken($buttonLight, 7%);
             }
 
             &.hover,
             &:hover {
-                border-color: $blueLighter;
-                background-color: $blueLight;
+                border-color: $buttonLighter;
+                background-color: $buttonLight;
             }
         }
     }
@@ -70,18 +70,18 @@ $btnTransition: 150ms;
 
             &.hover,
             &:hover {
-                border-color: $blueLight;
-                background-color: $blueLighter;
+                border-color: $buttonLight;
+                background-color: $buttonLighter;
             }
         }
 
         label {
-            color: $blueDark;
+            color: $buttonDark;
         }
     }
 
     &.btn-gray {
-        color: $blueDark;
+        color: $buttonDark;
         border-color: $grayLight;
         background-color: $grayLight;
 
@@ -95,31 +95,31 @@ $btnTransition: 150ms;
             &.hover,
             &:hover {
                 color: $white;
-                border-color: $blueDark;
-                background-color: $blueDark;
+                border-color: $buttonDark;
+                background-color: $buttonDark;
             }
         }
 
         label {
-            color: $blueDark;
+            color: $buttonDark;
         }
     }
 
     &.btn-dark {
-        border-color: $blueDark;
-        background-color: $blueDark;
+        border-color: $buttonDark;
+        background-color: $buttonDark;
 
         &:not([disabled]) {
 
             &:focus {
-                border-color: darken($blueDark, 7%);;
-                background-color: lighten($blueDark, 7%);
+                border-color: darken($buttonDark, 7%);;
+                background-color: lighten($buttonDark, 7%);
             }
 
             &.hover,
             &:hover {
-                border-color: $blueDarker;
-                background-color: $blueDarker;
+                border-color: $buttonDarker;
+                background-color: $buttonDarker;
             }
         }
     }
@@ -142,19 +142,19 @@ $btnTransition: 150ms;
     }
 
     &.btn-cta {
-        border-color: lighten($notice, 5%);
-        background-color: lighten($notice, 5%);
+        border-color: lighten($highlight, 5%);
+        background-color: lighten($highlight, 5%);
 
         &:not([disabled]) {
 
             &:focus {
-                background-color: lighten($notice, 15%);
+                background-color: lighten($highlight, 15%);
             }
 
             &.hover,
             &:hover {
-                border-color: $noticeDark;
-                background-color: $noticeDark;
+                border-color: $highlightDark;
+                background-color: $highlightDark;
             }
         }
     }
@@ -177,7 +177,7 @@ $btnTransition: 150ms;
     }
 
     &.btn-ghost {
-        color: $blue;
+        color: $button;
         border-color: transparent;
         background-color: transparent;
 
@@ -190,16 +190,16 @@ $btnTransition: 150ms;
 
             &.hover,
             &:hover {
-                color: darken($blue, 10%);
-                background-color: transparentize($blue, .85);
+                color: darken($button, 10%);
+                background-color: transparentize($button, .85);
             }
         }
     }
 
     &.btn-hollow {
-        color: $blue;
+        color: $button;
         background: transparent;
-        border-color: $blue;
+        border-color: $button;
 
         &:not([disabled]) {
 
@@ -211,13 +211,13 @@ $btnTransition: 150ms;
             &.hover,
             &:hover {
                 color: $white;
-                background-color: $blue;
+                background-color: $button;
             }
         }
 
         &.btn-light {
-            color: $blueLight;
-            border-color: $blueLight;
+            color: $buttonLight;
+            border-color: $buttonLight;
 
             &:focus {
                 border-color: $grayLighter;
@@ -227,13 +227,13 @@ $btnTransition: 150ms;
             &.hover,
             &:hover {
                 color: $white;
-                background-color: $blueLight;
+                background-color: $buttonLight;
             }
         }
 
         &.btn-dark {
-            color: $blueDark;
-            border-color: $blueDark;
+            color: $buttonDark;
+            border-color: $buttonDark;
 
             &:focus {
                 border-color: $gray;
@@ -243,7 +243,7 @@ $btnTransition: 150ms;
             &.hover,
             &:hover {
                 color: $white;
-                background-color: $blueDark;
+                background-color: $buttonDark;
             }
         }
 
@@ -260,8 +260,8 @@ $btnTransition: 150ms;
 
                 &.hover,
                 &:hover {
-                    border-color: $blueLighter;
-                    color: $blueLight;
+                    border-color: $buttonLighter;
+                    color: $buttonLight;
                     box-shadow: 0 0 10px transparentize($grayDark, .7);
                     background-color: transparent;
                 }

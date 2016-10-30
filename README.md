@@ -1,5 +1,11 @@
 # SPA-bones
-A single page app base that uses backbone.js, webpack and node.js to create an extremely fast application foundation.
+This is a single page app core that uses *backbone.js*, *webpack* and *node.js* to create an extremely fast web application foundation. Along with a handful of tools for common tasks and spec arrangements to bootstrap new apps while imposing the least amount of assumptions about functionality of the app.
 
 # Setup
-Requires Node.js and npm. Run `npm install` from project root.
+Core install requires node and npm.
+
+Start by running `npm install` from project root to set up dependancies.
+
+# How to Use
+
+// pending

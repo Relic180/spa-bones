@@ -1,3 +1,5 @@
 /_creative
 /node_modules
+/bundle
+
 *.sublime-*

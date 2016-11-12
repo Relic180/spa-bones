@@ -1,19 +1,28 @@
 var path = require('path'),
-    //webpack = require('webpack'),
     autoprefixer = require('autoprefixer');
 
 module.exports = {
     context: __dirname,
     entry: {
-        '_pack_onload_styles': './ui/bundle_def/on_load_scss.js',
-        // Add additional packs that are distinct from the application (e.g. 3rd party lib pack)
+        '_bones_app': './ui/start.js', // Core Application Bundle
 
-        '_bones_app': './ui/start.js'
-        // Add additional bundles beyond application core
+        // General support packs with unique purpose
+        '_pack_onload_styles': './ui/bundle_def/on_load_styles.js',
+
+        // Page Bundles
+        '_page_home': './ui/view/page/home.js',
+
+        // Component Bundles
+        '_component_core': './ui/bundle_def/component_core.js',
+        '_component_screentip_t1': './ui/bundle_def/component_screentip_tier1.js',
+        '_component_modal_t1': './ui/bundle_def/component_modal_tier1.js',
+        '_component_input_t1': './ui/bundle_def/component_input_tier1.js',
+        '_component_list_core': './ui/bundle_def/list_core'
     },
     output: {
         path: './bundle/',
-        filename: '[name].js'
+        filename: '[name].js',
+        sourceMapFilename: '/bundle/[file].map'
     },
     plugins: [
         // Include additional build plugins...
@@ -49,7 +58,7 @@ module.exports = {
     resolve: {
         root: __dirname,
         modulesDirectories: ['node_modules', 'libs'],
-        extensions: ['', '.js', '.scss'],
+        extensions: ['', '.js', '.scss', '.dot'],
         alias: {
             'mousetrap': path.join(__dirname, 'libs/mousetrap.js'), // https://craig.is/killing/mice
             'draggabilly': path.join(__dirname, 'libs/draggabilly.js'), // http://draggabilly.desandro.com/

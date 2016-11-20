@@ -23,36 +23,36 @@ window.Class = { // ClassTree values are equal to a class definition OR a string
             Home: '_page_home'
         },
         List: {
-            Simple: '_component_list_core',
+            Simple: '_cog_list_core',
             Row: {
-                User: '_component_list_core' // Available views should mirror available models
+                User: '_cog_list_core' // Available views should mirror available models
             }
         },
         Screentip: {
-            Coordinator: '_component_core',
-            Base: '_component_core',
-            Simple: '_component_core',
-            Custom: '_component_screentip_t1',
-            Contextmenu: '_component_screentip_t1',
-            Formflag: '_component_screentip_t1'
+            Coordinator: '_cog_core',
+            Base: '_cog_core',
+            Simple: '_cog_core',
+            Custom: '_cog_screentip_t1',
+            Contextmenu: '_cog_screentip_t1',
+            Formflag: '_cog_screentip_t1'
         },
         Modal: {
-            Coordinator: '_component_core',
-            Base: '_component_core',
-            Custom: '_component_modal_t1',
-            Prompt: '_component_modal_t1'
+            Coordinator: '_cog_core',
+            Base: '_cog_core',
+            Custom: '_cog_modal_t1',
+            Prompt: '_cog_modal_t1'
         },
         Messenger: {
-            Coordinator: '_component_core',
-            Base: '_component_core',
-            Simple: '_component_core'
+            Coordinator: '_cog_core',
+            Base: '_cog_core',
+            Simple: '_cog_core'
         },
         Input: {
-            Text: '_component_core',
-            Select: '_component_input_t1',
-            Slider: '_component_input_t1',
-            Toggle: '_component_input_t1',
-            Check: '_component_input_t1'
+            Text: '_cog_core',
+            Select: '_cog_input_t1',
+            Slider: '_cog_input_t1',
+            Toggle: '_cog_input_t1',
+            Check: '_cog_input_t1'
         }
     },
     Model: {

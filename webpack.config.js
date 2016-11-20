@@ -12,12 +12,12 @@ module.exports = {
         // Page Bundles
         '_page_home': './ui/view/page/home.js',
 
-        // Component Bundles
-        '_component_core': './ui/bundle_def/component_core.js',
-        '_component_screentip_t1': './ui/bundle_def/component_screentip_tier1.js',
-        '_component_modal_t1': './ui/bundle_def/component_modal_tier1.js',
-        '_component_input_t1': './ui/bundle_def/component_input_tier1.js',
-        '_component_list_core': './ui/bundle_def/list_core'
+        // Cog Bundles
+        '_cog_core': './ui/bundle_def/cog_core.js',
+        '_cog_screentip_t1': './ui/bundle_def/cog_screentip_tier1.js',
+        '_cog_modal_t1': './ui/bundle_def/cog_modal_tier1.js',
+        '_cog_input_t1': './ui/bundle_def/cog_input_tier1.js',
+        '_cog_list_core': './ui/bundle_def/cog_list_core'
     },
     output: {
         path: './bundle/',
@@ -68,7 +68,4 @@ module.exports = {
     externals: {
         jquery: 'jQuery'
     }
-    // node: {
-    //     fs: 'empty' // https://github.com/webpack/jade-loader/issues/8
-    // }
 };

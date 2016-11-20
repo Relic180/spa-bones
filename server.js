@@ -3,7 +3,7 @@
 const Hapi = require('hapi'),
       server = new Hapi.Server();
 
-server.connection({port: 3000});
+server.connection({port: 80});
 
 server.register(require('inert'), (err) => {
     if (err) throw err;

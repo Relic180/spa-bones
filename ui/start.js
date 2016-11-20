@@ -13,7 +13,7 @@ import AuthUser from './model/authuser.js';
 import View from './view/base.js';
 import Page from './view/page/base.js';
 import Collection from './collection/base.js';
-//import CollectionView from './collection/view/base.js'; // TODO: This is still throwing an error on load
+//import CollectionView from './collection/view/base.js'; // TODO: This is throwing an error on load
 
 window.Class = { // ClassTree values are equal to a class definition OR a string representing the bundle filename where the class is found.
     View: {

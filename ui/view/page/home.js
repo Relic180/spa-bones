@@ -2,7 +2,7 @@ import template from './templates/home';
 import './styles/home';
 
 const defaults = {
-
+    className: 'home'
 };
 
 Class.View.Page.Home = class Home extends Class.View.Page.Base {

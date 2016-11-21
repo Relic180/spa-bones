@@ -111,7 +111,7 @@ export default class Bones { // Main application object
 
     loadPage(pageName, options = {}) {
         this.newClass(`View.Page.${pageName}`, _.extend(options, {
-            el: this.appView.ui.$pageContainer
+            el: this.appView.ui.$page
         }), 'no-parent')
             .done((pageView) => {
                 if (this.currentPage) {
@@ -120,6 +120,8 @@ export default class Bones { // Main application object
 
                 this.currentPage = pageView;
                 this.currentPage.render();
+                this.currentPage.$el.attr('class', `page-${this.currentPage.className}`);
+
                 this.trigger('page:new', this.currentPage);
             });
     }
@@ -129,7 +131,7 @@ export default class Bones { // Main application object
                 Browser: true
             }[currentPage.pageName];
 
-        this.appView.ui.$pageContainer.toggleClass('is-flex-row', isFlexRow);
+        this.appView.ui.$page.toggleClass('is-flex-row', isFlexRow);
     }
 
     clientIsUnsupported() {
@@ -267,7 +269,7 @@ class BonesView extends View {
         this.app = options.app;
         this.ui = {
             'body': '#application-body',
-            'pageContainer': '@body [data-js~=page-container]'
+            'page': '@body [data-js~=page]'
         };
         this.events = {
             'click': 'onClickGlobal',
@@ -290,11 +292,11 @@ class BonesView extends View {
             this.trigger('window:resize', util.getWindowSize())
         }, 20);
         this.triggerContentScroll = _.throttle(() => {
-            let scrollTop = this.ui.$pageContainer[0].scrollTop;
+            let scrollTop = this.ui.$page[0].scrollTop;
             this.trigger('content:scroll', scrollTop);
         }, 20);
         $(window).on('resize', this.triggerWindowResize);
-        this.ui.$pageContainer.on('scroll', this.triggerContentScroll);
+        this.ui.$page.on('scroll', this.triggerContentScroll);
 
         $.when(this.app.$applicationReady).done(() => {
             this.triggerWindowResize();

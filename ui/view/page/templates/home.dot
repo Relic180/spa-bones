@@ -1,1 +1,11 @@
-<h1>Homepage is loading</h1>
+<div class="page-home-center">
+
+    <h1 class="page-home-title">Welcome to Bones.js</h1>
+
+    <p class="page-home-copy">Start by creating a homepage for your new single-page web application.</p>
+
+    <a class="page-home-opensource" href="http://www.opensource.org/docs/definition.php">
+        <img src="http://www.opensource.org/trademarks/opensource/web/opensource-110x95.png" alt="Open Source (OSI) Logo" border="0" width="110" height="95">
+    </a>
+
+</div>

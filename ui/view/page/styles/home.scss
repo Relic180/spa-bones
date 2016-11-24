@@ -10,8 +10,10 @@
 
     .page-home-title {
         color: $grayDark;
-        font-size: 38px;
-        font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+        font-size: 72px;
+        font-weight: $light;
+        font-style: italic;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
         white-space: nowrap;
     }
 

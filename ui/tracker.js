@@ -5,8 +5,7 @@ export default class Tracker {
 
         $.when(this.app.$applicationReady).done(() => {
             // Initialize Google analytics
-            //ga('create', 'UA-83583447-1', 'auto'); // TODO: What is the 3rd param here and do we need to change it?
-            //ga('create', 'UA-XXXXXXXX-1', 'auto');
+            ga('create', 'UA-XXXXXXXX-1', 'auto');
 
             this.trackEvents('AppLoad', { // Track the initial pageload
                 label: this.app.currentPage.pageName,
